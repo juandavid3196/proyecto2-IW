@@ -11,7 +11,7 @@ const Discover = () => {
 					<div className="discover-info">
 						<span className="info-ad">RENUEVA TUS ESPACIOS</span>
 						<span className="info-products">HOGAR Y MUEBLES HASTA 50% OFF</span>
-						<button className="btn w-1/2">Ver más</button>
+						<button className="btn-discover w-1/2">Ver más</button>
 					</div>
 					<div className="discover-img">
 						<img src="./img/discover-img/image-2.svg" alt="" />
@@ -21,7 +21,7 @@ const Discover = () => {
 					<div className="discover-info">
 						<span className="info-ad">SUSCRÍBETE AL NIVEL 6</span>
 						<span className="info-products">POR SOLO $17.899 CADA MES</span>
-						<button className="btn w-1/2">Suscribirme</button>
+						<button className="btn-discover w-1/2">Suscribirme</button>
 					</div>
 					<div className="discover-img">
 						<img src="./img/discover-img/image-1.svg" alt="" />

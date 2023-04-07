@@ -2,7 +2,7 @@ import React from 'react'
 
 const Category = () => {
 	return (
-		<section className="categories-section margin-40">
+		<section className="categories-section mt-[20px] mb-[8px]">
 			<div className="section-title">
 				<h3>Categorías populares</h3>
 			</div>

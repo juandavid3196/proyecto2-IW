@@ -11,7 +11,7 @@
 
 /* general classes */
 
-.margin-40{
+.margin-40 {
     padding: 40px 0;
 }
 
@@ -23,9 +23,9 @@
 
 .section-title {
     display: flex;
-    margin-left:40px;
+    margin-left: 40px;
     align-items: baseline;
-    margin-bottom:5px;
+    margin-bottom: 5px;
     color: #666666;
 }
 
@@ -51,7 +51,7 @@
     border-color: #007bff;
     line-height: 1.5;
     border-radius: 0.3rem;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.4rem;
     font-size: 16px;
     font-weight: 600;
     text-align: center;
@@ -75,7 +75,7 @@ header {
 nav {
     display: flex;
     flex-direction: column;
-    gap:10px;
+    gap: 10px;
     padding: 8px 40px;
     display: flex;
 }
@@ -89,11 +89,23 @@ nav {
 .search-bar {
     width: 600px;
     height: 40px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
     padding: 7px 0 9px 15px;
     border: none;
     font-size: 15px;
     font-weight: 300;
+    border-radius: 2px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0);
+    border-width: 1.5px;
+    position: relative;
+}
+
+.search-bar:focus {
+    border-style: solid;
+    border-color: #3483fa;
+    border-width: 1.5px;
+    outline: none;
 }
 
 .company-icon {
@@ -106,8 +118,8 @@ nav {
 .nav-container .services-list {
     list-style: none;
     display: flex;
-    gap:20px;
-    color:#857f43;
+    gap: 20px;
+    color: #857f43;
     margin-bottom: 0;
     margin-right: 85px;
 }
@@ -132,6 +144,10 @@ main {
 .paying-list .paying-box {
     height: 90px;
     flex: 1 0 auto;
+}
+
+.paying-list :nth-child(4) {
+    border-left: 1.2px solid #ebebeb;
 }
 
 .paying-info span {
@@ -194,6 +210,7 @@ main {
     font-size: 23px;
     display: flex;
     align-items: center;
+    color: #333;
 }
 
 .offer-off {
@@ -202,9 +219,10 @@ main {
 }
 
 .offer-sending {
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     color: #00A650;
+    line-height: 16px;
 }
 
 .offer-full {
@@ -215,7 +233,7 @@ main {
 /*Suscribtion section*/
 
 .subs-container {
-    padding:40px;
+    padding: 40px;
 }
 
 .subs-card {
@@ -227,11 +245,11 @@ main {
 
 .subs-title {
     padding: 16px 24px;
-    background: linear-gradient(90deg,#a90f90 55%,#0c1a51);
+    background: linear-gradient(90deg, #a90f90 55%, #0c1a51);
     color: white;
 }
 
-.subs-title > span {
+.subs-title>span {
     font-size: 23px;
     font-weight: 600;
 }
@@ -254,7 +272,7 @@ main {
 }
 
 .subs-offer .subs-month {
-    font-size:14;
+    font-size: 14;
     text-decoration: none;
 }
 
@@ -265,7 +283,7 @@ main {
 
 .subs-circle-img {
     border-radius: 50%;
-    border:1px solid #eee;
+    border: 1px solid #eee;
     width: 82px;
     height: 82px;
 }
@@ -280,10 +298,10 @@ main {
     font-size: 15px;
     display: flex;
     align-items: center;
-    gap:15px;
+    gap: 15px;
 }
 
-.subs-sentence{
+.subs-sentence {
     padding: 24px 20px;
 }
 
@@ -296,9 +314,9 @@ main {
     padding: 16px 30px;
 }
 
-.subs-button button{
-    font-size: 16px;
-    font-weight: 600;
+.subs-button button {
+    font-size: 14px;
+    font-weight: 500;
 }
 
 /* market section */
@@ -307,9 +325,9 @@ main {
     width: 384px;
     height: 250px;
     display: flex;
-   flex-direction: column;
-   justify-content: flex-end;
-   border-radius: 6px;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-radius: 6px;
 }
 
 .service-container {
@@ -321,9 +339,11 @@ main {
 .market-service.img-1 {
     background-image: url('../public/img/market-img/Widget_Multicontent_Latam_768-x-566px.jpg.svg');
 }
+
 .market-service.img-2 {
     background-image: url('../public/img/market-img/HBOMax_widgetmulti_mobdsk_mco_@2x.webp.svg');
 }
+
 .market-service.img-3 {
     background-image: url('../public/img/market-img/paramount_widgetmulti_mobdsk_mco_@2x.jpg.svg');
 }
@@ -334,20 +354,20 @@ main {
 
 .service-data h3 {
     font-size: 22px;
-    font-weight: 600;
+    font-weight: 500;
     color: white;
     line-height: 1;
 }
 
 .service-data .service-product {
     font-weight: 400;
-    font-size: 17px;
+    font-size: 16px;
     color: white;
-    line-height: 0.8;
+    line-height: 1.8;
 }
 
 .service-data .free-offer {
-    font-weight: bold;
+    font-weight: 500;
     font-size: 11px;
     margin-bottom: 4px;
     color: white;
@@ -390,6 +410,24 @@ main {
     margin-bottom: 15px;
 }
 
+.btn-discover {
+    color: #fff;
+    background-color: #3483fa;
+    border-color: #3483fa;
+    line-height: 1.5;
+    border-radius: 2px;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.btn-discover:hover {
+    color: #fff;
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
 /* store section */
 
 .store-item {
@@ -411,19 +449,20 @@ main {
 }
 
 .item-info .item-gallery {
-     display: flex;
-     gap: 6px;
+    display: flex;
+    gap: 6px;
 }
 
 .item-info .store-name {
     font-size: 24px;
-    font-weight: 600;
+    font-weight: 500;
+    color: #333;
 }
 
 .item-info .store-link {
     font-size: 15px;
-    font-weight: 600;
-    color:#999999;
+    font-weight: 500;
+    color: #999999;
     text-decoration: none;
 }
 
@@ -431,7 +470,7 @@ main {
     text-decoration: none;
 }
 
-.item-info > img {
+.item-info>img {
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     position: absolute;
@@ -467,7 +506,7 @@ main {
 
 .products-list {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     list-style: none;
 }
@@ -481,15 +520,17 @@ main {
     font-weight: 600;
     font-size: 12px;
     letter-spacing: 4px;
+    color: #4b4b4b;
 }
 
 .product-info-title {
     font-weight: 700;
     font-size: 28px;
+    color:#4b4b4b;
 }
 
 .title-option {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 26px;
 }
 
@@ -498,7 +539,7 @@ main {
 .categories-list {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(7, 1fr);
     border-radius: 4px;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
@@ -510,7 +551,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding:0 40px;
+    padding: 0 40px;
     background-color: white;
     border-bottom: 1px solid #eee;
 }
@@ -529,17 +570,17 @@ main {
     margin-bottom: 24px;
 }
 
-.suggestions-container :nth-child(1) > img {
+.suggestions-container :nth-child(1)>img {
     width: 66px;
     height: 46px;
 }
 
-.suggestions-container :nth-child(2) > img {
+.suggestions-container :nth-child(2)>img {
     width: 56px;
     height: 49px;
 }
 
-.suggestions-container :nth-child(3) > img {
+.suggestions-container :nth-child(3)>img {
     width: 49px;
     height: 52px;
 }
@@ -547,13 +588,13 @@ main {
 .suggestion-title {
     font-weight: 500;
     font-size: 19px;
-    color:#4B4B4B;
+    color: #4B4B4B;
 }
 
 .suggestion-message {
     font-weight: 400;
     font-size: 15px;
-    color:#999999;
+    color: #999999;
     line-height: 1.2;
     margin: 4px 0 10px
 }
@@ -561,7 +602,7 @@ main {
 .suggestion-link {
     font-weight: 400;
     font-size: 13px;
-    color:#3483FA;
+    color: #3483FA;
     text-decoration: none;
 }
 
@@ -579,6 +620,7 @@ main {
     padding: 20px 10px;
     border-bottom: 1px solid #eee;
 }
+
 .footer-options {
     height: 12px;
     margin-bottom: 7px;
@@ -587,7 +629,7 @@ main {
 .footer-option-list {
     display: flex;
     align-items: center;
-    gap:22px;
+    gap: 22px;
     list-style: none;
 }
 
@@ -595,7 +637,7 @@ main {
     font-size: 12px;
     cursor: pointer;
     font-weight: 400;
-    color:#333333;
+    color: #333333;
 }
 
 .footer-address span {
@@ -617,8 +659,5 @@ main {
 
 .footer-img {
     display: flex;
-    gap:20px;
+    gap: 20px;
 }
-
-
-
