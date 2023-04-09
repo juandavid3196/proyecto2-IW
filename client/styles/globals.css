@@ -68,26 +68,21 @@
 header {
     background-color: #fff15a;
     width: 100%;
-    height: 100px;
-    padding: 0;
 }
 
 nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 8px 40px;
     display: flex;
 }
 
 .nav-container {
-    display: flex;
     height: 40px;
     font-size: 13px;
 }
 
 .search-bar {
-    width: 600px;
     height: 40px;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
     padding: 7px 0 9px 15px;
@@ -109,21 +104,31 @@ nav {
 }
 
 .company-icon {
-    height: 34px;
+    height: 40px;
     width: 134px;
     margin-right: 50px;
-    object-fit: cover;
 }
 
 .nav-container .services-list {
     list-style: none;
     display: flex;
-    gap: 20px;
     color: #857f43;
     margin-bottom: 0;
-    margin-right: 85px;
 }
 
+.nav-small-icon {
+    height: 40px;
+    margin: 0 5px;
+}
+
+.icon-container {
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
 
 /*main*/
 
@@ -328,6 +333,7 @@ main {
     flex-direction: column;
     justify-content: flex-end;
     border-radius: 6px;
+    margin: 0 auto;
 }
 
 .service-container {
@@ -377,7 +383,7 @@ main {
 /* discover section */
 
 .discover-offer {
-    width: 584px;
+    width: 80%;
     height: 250px;
     background-color: white;
     border-radius: 6px;
@@ -385,6 +391,7 @@ main {
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
+    margin: 0 auto;
 }
 
 .discover-info {
@@ -420,6 +427,7 @@ main {
     font-size: 14px;
     font-weight: 500;
     text-align: center;
+    width: 120px;
 }
 
 .btn-discover:hover {
@@ -438,6 +446,7 @@ main {
     border-radius: 6px;
     overflow: hidden;
     position: relative;
+    margin: 0 auto;
 }
 
 .store-item .item-info {
@@ -490,18 +499,18 @@ main {
     display: flex;
     flex-direction: column;
     border-radius: 4px;
-    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    background-color: white;
-    height: 384px;
 }
 
 .main-product-info {
     display: flex;
     flex-direction: column;
-    padding-top: 20px;
-    padding-left: 25px;
+    padding: 20px 0 23px 25px;
     color: #4B4B4B;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background-color: white;
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .products-list {
@@ -526,7 +535,7 @@ main {
 .product-info-title {
     font-weight: 700;
     font-size: 28px;
-    color:#4b4b4b;
+    color: #4b4b4b;
 }
 
 .title-option {
@@ -543,6 +552,7 @@ main {
     border-radius: 4px;
     box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    margin: 0 auto;
 }
 
 /* suggestion section  */
@@ -551,7 +561,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 0 40px;
+    padding: 60px 40px 0 40px;
     background-color: white;
     border-bottom: 1px solid #eee;
 }
@@ -563,7 +573,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 60px 0 40px;
 }
 
 .suggestion-item img {
@@ -622,7 +631,6 @@ main {
 }
 
 .footer-options {
-    height: 12px;
     margin-bottom: 7px;
 }
 
@@ -660,4 +668,259 @@ main {
 .footer-img {
     display: flex;
     gap: 20px;
+}
+
+
+
+/* RESPONSIVE STYLES  */
+
+/* Header */
+
+@media (max-width:1240px) {
+
+    .store-section .section-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .market-section .section-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .supermarket-products .products-list {
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 16px;
+    }
+
+    .supermarket-products {
+        margin: 0 auto;
+    }
+
+    .categories-list {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+}
+
+@media (max-width:1024px) {
+
+    .paying-list {
+        flex-direction: column;
+    }
+
+    .paying-list .paying-box {
+        margin: 0 auto;
+        width: 50%;
+    }
+
+    .paying-list :nth-child(4) {
+        border-left: none;
+    }
+
+    .info-box {
+        margin: 10px 0;
+    }
+
+    .store-section .section-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .suggestions-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .suggestion-item {
+        width: 100%;
+    }
+
+    .discover-info .info-products {
+        font-size: 20px;
+    }
+}
+
+
+
+
+@media (max-width:768px) {
+
+    .store-section .section-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .market-section .section-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+
+    }
+
+    .market-service {
+        width: 370px;
+    }
+
+    .supermarket-section .section-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .supermarket-products .products-list {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+    }
+
+    .discover-offer {
+        width:100%;
+    }
+
+    .categories-list {
+        grid-template-columns: repeat(4, 1fr);
+        margin:0 auto;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .footer-user-info {
+        display: flex;
+        gap: 13px;
+    }
+
+    .footer-address {
+        margin: 0 auto;
+    }
+
+    .footer-option-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .section-container {
+
+        padding: 10px;
+    }
+
+}
+
+@media (max-width:640px) {
+    .store-section .section-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .discover-img img {
+        display: none;
+    }
+
+    .supermarket-section .section-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .supermarket-products .products-list {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+    }
+
+    .main-product {
+        width: 384px;
+        margin: 0 auto;
+    }
+
+    .categories-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .suggestions-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 60px 30px 60px;
+        gap: 20px;
+    }
+
+    .suggestion-item {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .market-section .section-container {
+
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .paying-list .paying-box {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+@media (max-width:425px) {
+
+    .categories-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-img {
+        display: grid;
+        gap: 10px;
+    }
+
+    .footer-img img {
+        margin: 0 auto;
+    }
+
+    .market-service {
+        width: 300px;
+    }
+
+    .discover-info {
+        padding: 58px 15px 0 15px;
+    }
+
+    .subs-info {
+        padding: 0 10px;
+    }
+
+    .section-title {
+        margin: 0 10px;
+    }
+
+    .main-product {
+        width: 300px;
+    }
+
+    .supermarket-section .title-option {
+        font-size: 23px;
+    }
+
+    .section-title h3 {
+        font-size: 22px;
+    }
+
+    .suggestions-container {
+        padding: 60px 20px 20px;
+        gap: 20px;
+    }
+
+    .suggestion-item {
+        padding: 15px 5px 10px;
+    }
+
+    .footer-user-info {
+        flex-direction: column;
+    }
+
+    .footer-options {
+        margin: 0 auto;
+    }
 }

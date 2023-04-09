@@ -15,7 +15,7 @@ const Subs = () => {
 					<div className="subs-sentence">
 						Consigue los mejores beneficios en Mercado Libre
 					</div>
-					<div className="subs-info flex justify-between">
+					<div className="subs-info flex justify-between flex-col lg:flex-row">
 						<div className="info-box">
 							<div className="subs-circle-img">
 								<img src="./img/subs-img/dplus.svg" alt="" />

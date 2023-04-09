@@ -6,7 +6,7 @@ const Discover = () => {
 			<div className="section-title">
 				<h3>Descubre</h3>
 			</div>
-			<div className="section-container">
+			<div className="section-container flex-col lg:flex-row gap-[10px] xl:width-[584px]">
 				<div className="discover-offer">
 					<div className="discover-info">
 						<span className="info-ad">RENUEVA TUS ESPACIOS</span>
