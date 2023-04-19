@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CartContext } from '@contexts/CartContext';
 
 interface ProductProps {
+	id:number;
 	img: string;
 	price: string;
 	discount: string;
@@ -8,10 +10,24 @@ interface ProductProps {
 	value: boolean;
 }
 
-const Product = ({ img, price, discount, message, value }: ProductProps) => {
+const Product = ({ id,img, price, discount, message, value }: ProductProps) => {
+
+	const {addToCart} = useContext(CartContext);
+
+	const handleProduct = () => {
+		addToCart({
+			id:id,
+			img: img,
+			price:price,
+			discount :discount,
+			message:message,
+			value:value,
+			quantity: 1
+		})
+	}
 
 	return (
-		<div className="offer-product">
+		<div className="offer-product" onClick={handleProduct}>
 			<div className="offer-img">
 				<img src={img} alt="" />
 			</div>
