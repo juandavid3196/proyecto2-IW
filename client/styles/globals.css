@@ -161,13 +161,13 @@ nav {
 
 }
 
-.cart-total button {
+.btn-reset {
     font-size: 13px;
     color: #3483fa;
     cursor: pointer;
 }
 
-.cart-total button:hover{
+.btn-reset:hover{
     color: #599bfe;
 }
 
@@ -181,6 +181,33 @@ nav {
     text-align: center;
 }
 
+.btn-check {
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    background-color: #305a07;
+    color: white;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.quantity-circle {
+    width: 15px;
+    height: 15px;
+    background: #3483fa;
+    border-radius: 50%;
+    position: absolute;
+    right: -5px;
+    top: -6px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /*main*/
 

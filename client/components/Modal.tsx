@@ -4,21 +4,27 @@ import { DialogTitle, DialogContent} from '@mui/material';
 
 
 interface ModalProps {
-    open : boolean;
-    setOpen : Dispatch<SetStateAction<boolean>>;
-    modalTitle : string; 
-    children: JSX.Element;
+  open: boolean;
+  setOpen:(value:boolean) => void;
+  modalTitle: string;
+  children: JSX.Element;
 }
 
 
-const Modal = ({open, setOpen, modalTitle, children} : ModalProps) => {
+const Modal = ({ open, setOpen, modalTitle, children }: ModalProps) => {
+
+  const handleCloseModal = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    setOpen(false);
+  };
 
   return (
-    <Dialog open={open} onClose={ ()=> setOpen(false)} >
-        <DialogTitle>{modalTitle}</DialogTitle>
-        <DialogContent>{children}</DialogContent>
+    <Dialog open={open} onClose={handleCloseModal} >
+      <DialogTitle>{modalTitle}</DialogTitle>
+      <DialogContent>{children}</DialogContent>
+      <div className='flex justify-end pb-2 pr-2'><button onClick={handleCloseModal}>close</button></div>
     </Dialog>
   )
 }
 
-export {Modal};
+export { Modal };

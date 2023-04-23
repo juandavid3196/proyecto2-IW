@@ -7,12 +7,31 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { CartContext } from '@contexts/CartContext';
 import AddIcon from '@mui/icons-material/Add';
 import RemoveIcon from '@mui/icons-material/Remove';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { MdDeleteForever } from 'react-icons/md';
+
 
 const Navbar = () => {
 
   const [openModal, setOpenModal] = useState<boolean>(false);
   const { cartItems, getTotal, removeFromCart, resetCart, addQuantity} = useContext(CartContext);
   let totalValue : number = getTotal();
+
+  const handleDelete = (id:number) => {
+    removeFromCart(id);
+    toast.success('deleted product successfully', {
+			position: toast.POSITION.BOTTOM_RIGHT,
+			autoClose: 3000,
+			hideProgressBar: true,
+			closeOnClick: true,
+			pauseOnHover: true,
+			draggable: true,
+			progress: undefined,
+      icon: <MdDeleteForever style={{ color: 'green',fontSize: '30px' }} />,
+    });
+
+  } 
 
   return (
     <nav className="py-[8px] lg:px-[40px]">
@@ -27,7 +46,8 @@ const Navbar = () => {
             <MenuIcon />
           </div>
           <div className='icon-container'>
-            <button onClick={() => setOpenModal(!openModal)}>
+            <button className='relative' onClick={() => setOpenModal(true)}>
+              <div className='quantity-circle'>{cartItems.length}</div>
               <ShoppingCartOutlinedIcon />
               <Modal
                 open={openModal}
@@ -66,7 +86,7 @@ const Navbar = () => {
                         </div>
 
                         <div>
-                          <button className='delete-product' onClick={()=> removeFromCart(item.id)}>
+                          <button className='delete-product' onClick={()=>handleDelete(item.id)}>
                             <DeleteIcon />
                           </button>
                         </div>
@@ -75,8 +95,11 @@ const Navbar = () => {
                   }
                   <div className="cart-total flex flex-col gap-2 items-start">
                     <span className='total-value font-medium'>Total: {totalValue.toFixed(2)}$</span>
-                    <button onClick={()=> resetCart()}>Reset cart</button>
+                    <div className='w-full'>
+                      <button className='btn-check'>Checkout</button>
+                    </div>
                   </div>
+                      <button className='btn-reset' onClick={()=> resetCart()}>Reset cart</button>
                 </div>
               </Modal>
             </button>
@@ -102,6 +125,7 @@ const Navbar = () => {
           <li className="text-black"><span>Mis compras</span></li>
         </ul>
       </div>
+      <ToastContainer />
     </nav>
   );
 };
