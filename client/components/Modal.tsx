@@ -22,7 +22,7 @@ const Modal = ({ open, setOpen, modalTitle, children }: ModalProps) => {
     <Dialog open={open} onClose={handleCloseModal} >
       <DialogTitle>{modalTitle}</DialogTitle>
       <DialogContent>{children}</DialogContent>
-      <div className='flex justify-end pb-2 pr-2'><button onClick={handleCloseModal}>close</button></div>
+      <div className='flex justify-end pb-2 pr-2'><button onClick={handleCloseModal}>salir</button></div>
     </Dialog>
   )
 }

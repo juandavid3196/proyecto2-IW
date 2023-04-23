@@ -52,7 +52,7 @@ const Navbar = () => {
               <Modal
                 open={openModal}
                 setOpen={setOpenModal}
-                modalTitle='Shopping Cart'
+                modalTitle='Carrito'
               >
                 <div className='cart-container w-[300px]'>
                   {
@@ -61,7 +61,7 @@ const Navbar = () => {
                       <div className='cart-box flex justify-around items-center' key={item.id}>
                         <div className='product-info flex gap-2 flex-col'>
                           <div className='product-left'>
-                            <span className='product-name'>Product-{item.id}</span>
+                            <span className='product-name'>{item.name}</span>
                           </div>
                           <div className='product-right flex gap-2'>
                             <img src={item.img} alt='' className='w-[50px] h-[50px]' />
@@ -96,10 +96,10 @@ const Navbar = () => {
                   <div className="cart-total flex flex-col gap-2 items-start">
                     <span className='total-value font-medium'>Total: {totalValue.toFixed(2)}$</span>
                     <div className='w-full'>
-                      <button className='btn-check'>Checkout</button>
+                      <button className='btn-check'>Finalizar compra</button>
                     </div>
                   </div>
-                      <button className='btn-reset' onClick={()=> resetCart()}>Reset cart</button>
+                      <button className='btn-reset' onClick={()=> resetCart()}>Limpiar</button>
                 </div>
               </Modal>
             </button>

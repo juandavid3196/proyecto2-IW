@@ -5,6 +5,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 interface ProductProps {
 	id: number;
+	name:string;
 	img: string;
 	price: string;
 	discount: string;
@@ -12,13 +13,14 @@ interface ProductProps {
 	value: boolean;
 }
 
-const Product = ({ id, img, price, discount, message, value }: ProductProps) => {
+const Product = ({ id, img, price, discount, message, value, name }: ProductProps) => {
 
 	const { addToCart } = useContext(CartContext);
 
 	const handleProduct = () => {
 		addToCart({
 			id: id,
+			name:name,
 			img: img,
 			price: price,
 			discount: discount,
