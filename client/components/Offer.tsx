@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { Product } from '@components/Product';
 import { products } from '@utils/data';
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 import { Carousel } from './Carousel';
 
 const Offer = () => {
@@ -15,20 +13,20 @@ const Offer = () => {
 			</div>
 			<div className="offer-container">
 				<Carousel>
-						{
-							products.map((item) => (
-								<Product
-									key={item.id}
-									name={item.name}
-									id={item.id}
-									img={item.img}
-									price={item.price}
-									discount={item.discount}
-									message={item.message}
-									value={item.value}
-								/>
-							))
-						}
+					{
+						products.map((item) => (
+							<Product
+								key={item.id}
+								name={item.name}
+								id={item.id}
+								img={item.img}
+								price={item.price}
+								discount={item.discount}
+								message={item.message}
+								value={item.value}
+							/>
+						))
+					}
 				</Carousel>
 			</div>
 		</section>

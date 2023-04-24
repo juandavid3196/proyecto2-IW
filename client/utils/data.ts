@@ -1,7 +1,7 @@
 
 interface ProductsItem {
     id: number;
-    name:string;
+    name: string;
     img: string;
     price: string;
     discount: string;
@@ -10,10 +10,10 @@ interface ProductsItem {
 }
 
 
-export const products : ProductsItem[] = [
+export const products: ProductsItem[] = [
     {
         id: 1,
-        name:'Silla',
+        name: 'Silla',
         img: './img/offer-img/silla.svg',
         price: '210.900',
         discount: '32',
@@ -22,7 +22,7 @@ export const products : ProductsItem[] = [
     },
     {
         id: 2,
-        name:'Microfono',
+        name: 'Microfono',
         img: './img/offer-img/soporte-micro.svg',
         price: '74.990',
         discount: '25',
@@ -31,7 +31,7 @@ export const products : ProductsItem[] = [
     },
     {
         id: 3,
-        name:'Afeitadora',
+        name: 'Afeitadora',
         img: './img/offer-img/afeitadora.svg',
         price: '134.950',
         discount: '50',
@@ -40,7 +40,7 @@ export const products : ProductsItem[] = [
     },
     {
         id: 4,
-        name:'Closet',
+        name: 'Closet',
         img: './img/offer-img/closet.svg',
         price: '149.900',
         discount: '30',
@@ -49,16 +49,16 @@ export const products : ProductsItem[] = [
     },
     {
         id: 5,
-        name:'Cortina',
+        name: 'Cortina',
         img: './img/offer-img/cortina.svg',
         price: '69.990',
         discount: '17',
-        message: 'false',
-        value: true
+        message: 'Envío gratis',
+        value: false
     },
     {
         id: 6,
-        name:'Bicicleta',
+        name: 'Bicicleta',
         img: './img/offer-img/bicicleta.webp',
         price: '210.900',
         discount: '32',
@@ -67,7 +67,7 @@ export const products : ProductsItem[] = [
     },
     {
         id: 7,
-        name:'Macbook',
+        name: 'Macbook',
         img: './img/offer-img/camara.webp',
         price: '74.990',
         discount: '25',
@@ -76,7 +76,7 @@ export const products : ProductsItem[] = [
     },
     {
         id: 8,
-        name:'Tenis',
+        name: 'Tenis',
         img: './img/offer-img/computador.png',
         price: '134.950',
         discount: '50',
@@ -85,7 +85,7 @@ export const products : ProductsItem[] = [
     },
     {
         id: 9,
-        name:'Secador',
+        name: 'Secador',
         img: './img/offer-img/secador.webp',
         price: '149.900',
         discount: '30',
@@ -94,11 +94,11 @@ export const products : ProductsItem[] = [
     },
     {
         id: 10,
-        name:'Gafas',
+        name: 'Gafas',
         img: './img/offer-img/gafas.webp',
         price: '69.990',
         discount: '17',
-        message: 'false',
-        value: true
+        message: 'Envío gratis',
+        value: false
     },
 ];

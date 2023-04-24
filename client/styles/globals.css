@@ -148,10 +148,10 @@ nav {
 
 .product-discount {
     font-size: 14px;
-    color:#00A650;
+    color: #00A650;
 }
 
-.delete-product:hover{
+.delete-product:hover {
     color: #fd2424;
     cursor: pointer;
 }
@@ -167,7 +167,7 @@ nav {
     cursor: pointer;
 }
 
-.btn-reset:hover{
+.btn-reset:hover {
     color: #599bfe;
 }
 
@@ -208,6 +208,42 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
+/* resposive menu */
+
+.menu-section {
+    background-color: #ebebeb;
+    padding-bottom: 40px;
+}
+
+.menu-container {
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .14), 0 1px 0 0 rgba(0, 0, 0, .05);
+}
+
+.menu-box {
+    padding: 16px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.menu-box li {
+    padding: 8px 26px 8px;
+    display: flex;
+    align-items: center;
+    color: rgba(0, 0, 0, .8);
+    font-size: 14px;
+}
+
+.menu-box li:hover {
+    color: #3483fa;
+    background: #f7f7f7;
+}
+
+.menu-box span {
+    margin-left: 18px;
+    font-weight: 500;
+}
+
 
 /*main*/
 
@@ -322,7 +358,7 @@ main {
     line-height: 16px;
 }
 
-.offer-full {
+.offer-info .offer-full {
     width: 39px;
     height: 15px;
 }
@@ -870,12 +906,12 @@ main {
     }
 
     .discover-offer {
-        width:100%;
+        width: 100%;
     }
 
     .categories-list {
         grid-template-columns: repeat(4, 1fr);
-        margin:0 auto;
+        margin: 0 auto;
     }
 
     .footer-container {

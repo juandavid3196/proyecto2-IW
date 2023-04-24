@@ -1,11 +1,11 @@
 import React, { Dispatch, SetStateAction } from 'react'
 import Dialog from '@mui/material/Dialog';
-import { DialogTitle, DialogContent} from '@mui/material';
+import { DialogTitle, DialogContent } from '@mui/material';
 
 
 interface ModalProps {
   open: boolean;
-  setOpen:(value:boolean) => void;
+  setOpen: (value: boolean) => void;
   modalTitle: string;
   children: JSX.Element;
 }
