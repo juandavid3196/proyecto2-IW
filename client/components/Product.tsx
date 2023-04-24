@@ -29,7 +29,7 @@ const Product = ({ id, img, price, discount, message, value, name }: ProductProp
 			quantity: 1
 		});
 
-		toast.success('addded product successfully', {
+		toast.success('Producto añadido exitosamente', {
 			position: toast.POSITION.BOTTOM_RIGHT,
 			autoClose: 3000,
 			hideProgressBar: true,

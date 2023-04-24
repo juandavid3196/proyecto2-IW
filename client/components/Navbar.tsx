@@ -22,7 +22,7 @@ const Navbar = () => {
 
   const handleDelete = (id: number) => {
     removeFromCart(id);
-    toast.success('deleted product successfully', {
+    toast.success('Producto eliminado', {
       position: toast.POSITION.BOTTOM_RIGHT,
       autoClose: 3000,
       hideProgressBar: true,
